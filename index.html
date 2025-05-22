@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <title>Abduct me, if you can</title>
+    </head>
+    <body>
+        <div class="grid"></div>
+        <section id="start-screen">
+            <div class="title-wrapper">
+                <img src="./materials/human_abduction.png" alt="Logo" />
+                <h1>Abduct me, <br>if you can</h1>
+            </div>
+            <button id="start-btn" class="btn">Start</button>
+            <p>Press Start!</p>
+        </section>
+        <canvas id="gameCanvas"></canvas>
+        <div id="waveIndicator"></div>
+        <main>
+            <section id="room"></section>
+        </main>
+        <div id="gameOver-wrapper">
+            <div id="gameOver">Game Over</div>
+            <button id="retryBtn" class="btn">Retry</button>
+            <button id="backHome" class="btn">Back to Home</button>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>

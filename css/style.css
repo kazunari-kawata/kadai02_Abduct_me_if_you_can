@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "ArcadeClassic", serif;
+}
+html,
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+#room {
+    height: 100vh;
+    width: 100vw;
+}
+#start-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#start-screen > *:not(.grid) {
+    z-index: 1;
+}
+
+.grid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 200vmax;
+    height: 200vmax;
+    background-image: linear-gradient(
+            transparent 95%,
+            rgba(0, 255, 255, 0.4) 95%
+        ),
+        linear-gradient(to right, transparent 95%, rgba(0, 255, 255, 0.4) 95%);
+    background-size: 40px 40px;
+    transform: translate(-50%, -50%) perspective(600px) rotateX(67deg)
+        scale(1.2);
+    animation: moveGrid 10s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+@keyframes moveGrid {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 100px;
+    }
+}
+.btn {
+    color: #00ff00;
+    margin-top: 20px;
+    padding: 10px 50px;
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    border: solid 5px #00ff00;
+    transition: all 0.2s ease;
+}
+#start-btn {
+    font-size: 30px;
+}
+.btn:hover {
+    color: white;
+    background-color: #00ff00;
+}
+
+#start-screen .title-wrapper {
+    display: flex;
+    align-items: center;
+}
+#start-screen .title-wrapper h1 {
+    color: white;
+    font-size: clamp(2rem, 8vw, 8rem);
+    margin: 0;
+}
+
+#start-screen .title-wrapper img {
+    max-height: 18rem;
+    width: auto;
+}
+#start-screen p {
+    color: white;
+    font-size: 40px;
+    margin-top: 20px;
+}
+#start-screen h1,
+p {
+    text-shadow: 5px 5px 1px #00ffff66;
+}
+#waveIndicator {
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-shadow: 5px 5px 1px #00ffff66;
+    font-size: 48px;
+}
+#gameOver-wrapper {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#gameOver {
+    font-size: 70px;
+    color: white;
+    text-shadow: 5px 5px 1px #00ffff66;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#gameOver-wrapper.visible {
+    display: flex;
+}
+canvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+}
