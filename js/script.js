@@ -1,30 +1,30 @@
 $(function () {
     //キャラクター画像
     const playerImg = new Image();
-    playerImg.src = "../materials/player.png";
+    playerImg.src = "./materials/player.png";
 
     const alienImg1 = new Image();
-    alienImg1.src = "../materials/alien1.png";
+    alienImg1.src = "./materials/alien1.png";
 
     const alienImg2 = new Image();
-    alienImg2.src = "../materials/alien2.png";
+    alienImg2.src = "./materials/alien2.png";
 
     const alienImg3 = new Image();
-    alienImg3.src = "../materials/alien3.png";
+    alienImg3.src = "./materials/alien3.png";
 
     const alienImg4 = new Image();
-    alienImg4.src = "../materials/alien4.png";
+    alienImg4.src = "./materials/alien4.png";
 
     const alienImg5 = new Image();
-    alienImg5.src = "../materials/alien5.png";
+    alienImg5.src = "./materials/alien5.png";
 
     // 配列にエイリアンをまとめて
     const alienImages = [alienImg1, alienImg2, alienImg3, alienImg4, alienImg5];
 
     //他のBGMなどは別のところにあるが、audio_gamOverだけはonGameOverとの兼ね合いでここに配置
-    const audio_oh_no = new Audio("../materials/oh-no.mp3");
+    const audio_oh_no = new Audio("./materials/oh-no.mp3");
     audio_oh_no.volume = 0.6;
-    const audio_gameOver = new Audio("../materials/Audio_gameover.mp3");
+    const audio_gameOver = new Audio("./materials/Audio_gameover.mp3");
     audio_gameOver.volume = 0.1;
 
     //ウェーブアタック
@@ -253,15 +253,15 @@ $(function () {
     $(document).on("keyup", (e) => (keys[e.key] = false));
 
     // BGMや効果音
-    const bgm = new Audio("../materials/bgm.mp3");
+    const bgm = new Audio("./materials/bgm.mp3");
     bgm.loop = true;
     bgm.volume = 0.3;
 
-    const audio_alien_stuck = new Audio("../materials/Audio_alien_stuck.mp3");
+    const audio_alien_stuck = new Audio("./materials/Audio_alien_stuck.mp3");
     audio_alien_stuck.volume = 0.2;
 
     const audio_alien_unstuck = new Audio(
-        "../materials/Audio_alien_unstuck.mp3"
+        "./materials/Audio_alien_unstuck.mp3"
     );
     audio_alien_unstuck.volume = 0.5;
 
