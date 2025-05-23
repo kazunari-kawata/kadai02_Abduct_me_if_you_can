@@ -30,3 +30,5 @@ Abduct me, if you can
 多くの関数や配列を実践的に扱い、JavaScript への理解が一段と深まりました。
 今後は React やバックエンド技術にも挑戦し、この経験をさらに広げていきたいと思います。
 これからも継続的に学びながら、技術の習得に邁進したいです。
+
+![スクリーンショット 2025-05-22 20 25 48](https://github.com/user-attachments/assets/d097ab21-6c59-40ef-b6e4-bc470c2c3a95)
